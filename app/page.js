@@ -14,13 +14,15 @@ export default function Home() {
         />
       </div>
 
-      <div className='border-2 bg-black text-white p-2  rounded-xl  '>
+      <div>
         <a
           href='/dashboard'
           className='group rounded-lg border border-transparent px-5 py-4 transition-colors'
           rel='noopener noreferrer'
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2
+            className={`text-2xl font-semibold border-1 bg-black text-white p-4  rounded-xl`}
+          >
             Access Dashboard
             <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
               -&gt;
