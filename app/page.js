@@ -1,9 +1,36 @@
 import Image from 'next/image'
-
+import {
+  RegisterLink,
+  LoginLink,
+} from '@kinde-oss/kinde-auth-nextjs/components'
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-evenly p-24'>
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+    <div class='flex h-screen justify-center items-center dark:bg-gray-800 gap-10'>
+      <div class='text-center max-w-6xl mx-10'>
+        <p class='my-3 text-sm tracking-widest text-indigo-500 uppercase'>
+          Fast &amp; SEO friendly
+        </p>
+        <h1 class='my-3 text-3xl font-bold tracking-tight text-gray-800 md:text-5xl dark:text-gray-100'>
+          Important <span className='t text-indigo-500'> Next.js</span> Concepts
+        </h1>
+        <div>
+          <p class='max-w-2xl mx-auto my-2 text-base text-gray-500 md:leading-relaxed md:text-xl dark:text-gray-400'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            numquam veniam vitae excepturi voluptates, ratione commodi dolorem
+            quae, magni nihil in corporis labore cum aut facilis fugit iste
+            reprehenderit debitis.
+          </p>
+        </div>
+        <div class='flex flex-col items-center justify-center gap-5 mt-6 md:flex-row'>
+          <LoginLink className='inline-block w-auto text-center min-w-[200px] px-6 py-4 text-white transition-all rounded-md shadow-xl sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:bg-gradient-to-b dark:shadow-blue-900 shadow-blue-200 hover:shadow-2xl hover:shadow-blue-400 hover:-tranneutral-y-px '>
+            Login
+          </LoginLink>
+          <RegisterLink className='inline-block w-auto text-center min-w-[200px] px-6 py-4 text-white transition-all bg-gray-700 dark:bg-white dark:text-gray-800 rounded-md shadow-xl sm:w-auto hover:bg-gray-900 hover:text-white shadow-neutral-300 dark:shadow-neutral-700 hover:shadow-2xl hover:shadow-neutral-400 hover:-tranneutral-y-px'>
+            Register
+          </RegisterLink>
+        </div>
+      </div>
+      <div>
         <Image
           className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
           src='/dashboard.svg'
@@ -13,23 +40,6 @@ export default function Home() {
           priority
         />
       </div>
-
-      <div>
-        <a
-          href='/dashboard'
-          className='group rounded-lg border border-transparent px-5 py-4 transition-colors'
-          rel='noopener noreferrer'
-        >
-          <h2
-            className={`text-2xl font-semibold border-1 bg-black text-white p-4  rounded-xl`}
-          >
-            Access Dashboard
-            <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-              -&gt;
-            </span>
-          </h2>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }

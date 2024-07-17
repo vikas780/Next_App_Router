@@ -1,13 +1,13 @@
 async function getTodos() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos')
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
   return await res.json()
 }
 const Todos = async () => {
   const data = await getTodos()
   return (
     <div>
-      <h1 className='text-4xl font-bold mb-3'>Todos</h1>
-      <div className='grid grid-cols-3 gap-4'>
+      <h1 className=' text-4xl font-bold mb-3 '>Todos</h1>
+      <div className='grid grid-cols-3 gap-4 bg-white'>
         {data &&
           data.map((todo) => {
             return (
